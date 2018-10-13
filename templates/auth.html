@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<section id="banner" class="content">
+    <div class="inner">
+        <header>
+            <h3>Login</h3>
+        </header>
+    
+        <div class="py-5 bg-dark box box-danger">
+
+        <form action="{% url 'gen:login' %}" method="post">
+            <div class="py-5 bg-dark" >
+                
+                {% csrf_token %}
+                
+            <div style="margin-left: 440px; width: 300px; height: 80px;">
+                <input name="username" type="text" class="form-control" placeholder="Usuário">
+            </div>
+            
+            <div style="margin-left: 440px; width: 300px; height: 100px;">
+                <input name="password" type="password" class="form-control" placeholder="Senha">
+            </div>
+            
+            <div>
+                <button type="submit" class="btn btn-light" id="butaum">Entrar</button>
+            </div>
+            </div>
+        </div>
+    </form>
+
+    </div>
+    </div>
+    </section>
+
+{% endblock %}
+</html>

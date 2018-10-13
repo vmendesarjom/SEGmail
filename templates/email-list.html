@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<section id="banner">
+        <div class="inner">
+            <header>
+                <h3>Fichas</h3>
+            </header>
+    
+    <div class="flex" style="color: white;">    
+    <table class="table table-striped">
+        <thead>
+            <th style="color: white;">Personagem</th>
+            <th style="color: white;">Classe</th>
+            <th style="color: white;">Raça</th>
+            <th style="color: white;">Equipamento</th>
+        </thead>
+        <tbody>
+            {% for obj in object_list %}
+            <tr>
+                <td>{{obj.nome}}</td>
+                <td>{{obj.classe}}</td>
+                <td>{{obj.raca}}</td>
+                <td>{{obj.equipamento}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
